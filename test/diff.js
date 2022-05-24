@@ -19,10 +19,10 @@ function abstractMorph(morph) {
       t.test('should replace a component', function (t) {
         t.plan(2);
         function ComponentA() {
-          return html`<div data-nanomorph-component-id="a">hello world</div>`;
+          return html`<div data-morph="a">hello world</div>`;
         }
         function ComponentB() {
-          return html`<div data-nanomorph-component-id="b">bye moon</div>`;
+          return html`<div data-morph="b">bye moon</div>`;
         }
 
         const a = ComponentA();

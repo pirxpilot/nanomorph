@@ -69,18 +69,18 @@ we're implementing a custom component system, for example, components of
 different types should probably be treated as if they had different tags—even
 if they both render a `<div>` at their top level.
 
-Nodes can have an optional `data-nanomorph-component-id` attribute. `nanomorph`
+Nodes can have an optional `data-morph` attribute. `nanomorph`
 will only ever morph nodes if they both have the same value in this attribute.
 If the values differ, the old node is replaced with the new one.
 
 ```js
-var el = html`<div data-nanomorph-component-id="a">hello</div>`
-var el2 = html`<div data-nanomorph-component-id="b">goodbye</div>`
+var el = html`<div data-morph="a">hello</div>`
+var el2 = html`<div data-morph="b">goodbye</div>`
 
 assert.equal(nanomorph(el, el2), el2)
 ```
 
-nanomorph doesn't have an opinion on the values of the `data-nanomorph-component-id`
+nanomorph doesn't have an opinion on the values of the `data-morph`
 attribute, so we can decide the meaning we give it on a case by case basis. There
 could be a unique ID for every _type_ of component, or a unique ID for every
 _instance_ of a component, or any other meaning.
