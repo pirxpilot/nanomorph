@@ -9,16 +9,6 @@ function raiseEvent(element, eventName) {
   event.initEvent(eventName, true, true);
   element.dispatchEvent(event);
 }
-/* Note:
-Failing tests have been commented. They include the following:
-  onfocusin
-  onfocusout
-  ontouchcancel
-  ontouchend
-  ontouchmove
-  ontouchstart
-  onunload
-*/
 
 function abstractMorphEvents(morph) {
   tape('events', function (t) {
@@ -712,102 +702,6 @@ function abstractMorphEvents(morph) {
 
       t.equal(expectationMet, true, 'result was expected');
     });
-    /*
-    t.test('should have onfocusin events (html attribute) ', function (t) {
-      t.plan(1)
-      let expectationMet = false
-      let res = html`<input onfocusin=${pass}></input>`
-
-      raiseEvent(res, 'focusin')
-
-      function pass (e) {
-        e.preventDefault()
-        expectationMet = true
-      }
-
-      t.equal(expectationMet, true, 'result was expected')
-    })
-    t.test('should not copy onfocusin events', function (t) {
-      t.plan(1)
-      let expectationMet = true
-      let a = html`<input onfocusin=${fail}></input>`
-      let b = html`<input></input>`
-      let res = morph(a, b, { events })
-
-      raiseEvent(res, 'focusin')
-
-      function fail (e) {
-        e.preventDefault()
-        expectationMet = false
-      }
-
-      t.equal(expectationMet, true, 'result was expected')
-    })
-    t.test('should copy onfocusin events (html attribute)', function (t) {
-      t.plan(1)
-      let expectationMet = false
-      let a = html`<input></input>`
-      let b = html`<input onfocusin=${pass}></input>`
-      let res = morph(a, b, { events })
-
-      raiseEvent(res, 'focusin')
-
-      function pass (e) {
-        e.preventDefault()
-        expectationMet = true
-      }
-
-      t.equal(expectationMet, true, 'result was expected')
-    })
-    */
-    /*
-    t.test('should have onfocusout events (html attribute) ', function (t) {
-      t.plan(1)
-      let expectationMet = false
-      let res = html`<input onfocusout=${pass}></input>`
-
-      raiseEvent(res, 'focusout')
-
-      function pass (e) {
-        e.preventDefault()
-        expectationMet = true
-      }
-
-      t.equal(expectationMet, true, 'result was expected')
-    })
-    t.test('should not copy onfocusout events', function (t) {
-      t.plan(1)
-      let expectationMet = true
-      let a = html`<input onfocusout=${fail}></input>`
-      let b = html`<input></input>`
-      let res = morph(a, b, { events })
-
-      raiseEvent(res, 'focusout')
-
-      function fail (e) {
-        e.preventDefault()
-        expectationMet = false
-      }
-
-      t.equal(expectationMet, true, 'result was expected')
-    })
-    t.test('should copy onfocusout events (html attribute)', function (t) {
-      t.plan(1)
-      let expectationMet = false
-      let a = html`<input></input>`
-      let b = html`<input onfocusout=${pass}></input>`
-      let res = morph(a, b, { events })
-
-      raiseEvent(res, 'focusout')
-
-      function pass (e) {
-        e.preventDefault()
-        expectationMet = true
-      }
-
-      t.equal(expectationMet, true, 'result was expected')
-    })
-    */
     t.test('should have oninput events (html attribute) ', function (t) {
       t.plan(1);
       let expectationMet = false;
