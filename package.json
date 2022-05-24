@@ -4,9 +4,7 @@
   "description": "Hyper fast diffing algorithm for real DOM nodes",
   "main": "index.js",
   "scripts": {
-    "deps": "dependency-check . && dependency-check . --extra --no-dev -i nanoassert",
-    "test": "standard && npm run deps && browserify test/index.js | tape-run",
-    "test:fast": "browserify test/diff.js | tape-run",
+    "test": "browserify test | tape-run",
     "start": "bankai start --debug test/diff.js"
   },
   "repository": "pirxpilot/nanomorph",
@@ -28,14 +26,11 @@
     "assert": "nanoassert"
   },
   "devDependencies": {
-    "bankai": "^7.6.2",
-    "browserify": "^16.5.0",
-    "dependency-check": "^2.5.1",
+    "jsdom": "^19.0.0",
+    "jsdom-global": "^3.0.2",
     "math-random-seed": "^1.0.0",
     "nanohtml": "^1.4.0",
-    "standard": "^10.0.3",
-    "tape": "^4.13.0",
-    "tape-run": "^6.0.1"
+    "tape": "~5"
   },
   "files": [
     "index.js",

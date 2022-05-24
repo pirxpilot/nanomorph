@@ -1,17 +1,17 @@
+require('jsdom-global')();
+
 const tape = require('tape');
 
-const abstractMorph = require('./diff');
 const nanomorph = require('../');
+
+const abstractMorph = require('./diff');
 const abstractMorphEvents = require('./events');
 
-if (!module.parent) {
-  require('./fuzz');
-  specificTests(nanomorph);
-  abstractMorph(nanomorph);
-  abstractMorphEvents(nanomorph);
-} else {
-  module.exports = abstractMorph;
-}
+require('./fuzz');
+
+specificTests(nanomorph);
+abstractMorph(nanomorph);
+abstractMorphEvents(nanomorph);
 
 function specificTests(morph) {
   tape('nanomorph', function (t) {
