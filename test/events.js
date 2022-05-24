@@ -1,5 +1,5 @@
-let tape = require('tape');
-let html = require('nanohtml');
+const tape = require('tape');
+const html = require('nanohtml');
 
 module.exports = abstractMorphEvents;
 
