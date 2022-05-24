@@ -19,7 +19,7 @@ module.exports = nanomorph;
 //   -> diff nodes and apply patch to old node
 // nodes are the same
 //   -> walk all child nodes and append to old node
-function nanomorph(oldTree, newTree, { childrenOnly, morphId = 'morph' } = {}) {
+function nanomorph(oldTree, newTree, { childrenOnly, morphId = 'morph', events } = {}) {
   assert(typeof oldTree === 'object', 'nanomorph: oldTree should be an object');
   assert(typeof newTree === 'object', 'nanomorph: newTree should be an object');
 
@@ -49,7 +49,7 @@ function nanomorph(oldTree, newTree, { childrenOnly, morphId = 'morph' } = {}) {
     ) {
       return newNode;
     } else {
-      morph(newNode, oldNode);
+      morph(newNode, oldNode, events);
       updateChildren(newNode, oldNode);
       return oldNode;
     }
