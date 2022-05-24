@@ -1,4 +1,4 @@
-const assert = require('nanoassert');
+const assert = require('assert');
 const morph = require('./lib/morph');
 
 const TEXT_NODE = 3;
@@ -20,17 +20,16 @@ module.exports = nanomorph;
 // nodes are the same
 //   -> walk all child nodes and append to old node
 function nanomorph(oldTree, newTree, options = {}) {
-  assert.equal(typeof oldTree, 'object', 'nanomorph: oldTree should be an object');
-  assert.equal(typeof newTree, 'object', 'nanomorph: newTree should be an object');
+  assert(typeof oldTree === 'object', 'nanomorph: oldTree should be an object');
+  assert(typeof newTree === 'object', 'nanomorph: newTree should be an object');
 
   if (options.childrenOnly) {
     updateChildren(newTree, oldTree);
     return oldTree;
   }
 
-  assert.notEqual(
-    newTree.nodeType,
-    11,
+  assert(
+    newTree.nodeType !== 11,
     'nanomorph: newTree should have one root node (which is not a DocumentFragment)'
   );
 
@@ -126,9 +125,17 @@ function updateChildren(newNode, oldNode) {
 }
 
 function same(a, b) {
-  if (a.id) { return a.id === b.id; }
-  if (a.isSameNode) { return a.isSameNode(b); }
-  if (a.tagName !== b.tagName) { return false; }
-  if (a.type === TEXT_NODE) { return a.nodeValue === b.nodeValue; }
+  if (a.id) {
+    return a.id === b.id;
+  }
+  if (a.isSameNode) {
+    return a.isSameNode(b);
+  }
+  if (a.tagName !== b.tagName) {
+    return false;
+  }
+  if (a.type === TEXT_NODE) {
+    return a.nodeValue === b.nodeValue;
+  }
   return false;
 }
