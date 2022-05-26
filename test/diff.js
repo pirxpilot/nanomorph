@@ -252,7 +252,7 @@ function abstractMorph(morph) {
         t.plan(1);
         const a = html`<div>YOLO</div>`;
         const b = html`<div>FOMO</div>`;
-        b.isSameNode = function (el) {
+        b.isSameNode = function () {
           return true;
         };
         const res = morph(a, b);
@@ -263,7 +263,7 @@ function abstractMorph(morph) {
         t.plan(1);
         const a = html`<div>YOLO</div>`;
         const b = html`<div>FOMO</div>`;
-        b.isSameNode = function (el) {
+        b.isSameNode = function () {
           return false;
         };
         const res = morph(a, b);
