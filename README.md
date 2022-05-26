@@ -1,8 +1,11 @@
-# nanomorph [![stability][0]][1]
-[![npm version][2]][3] [![build status][4]][5]
-[![downloads][8]][9] [![js-standard-style][10]][11]
+[![NPM version][npm-image]][npm-url]
+[![Build Status][build-image]][build-url]
+[![Dependency Status][deps-image]][deps-url]
+
+# @pirxpilot/nanomorph
 
 Hyper fast diffing algorithm for real DOM nodes :zap:
+It is a fork of [nanomorph](https://github.com/choojs/nanomorph)
 
 ## Usage
 ```js
@@ -138,20 +141,16 @@ $ npm install nanomorph
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
 
-[0]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
-[1]: https://nodejs.org/api/documentation.html#documentation_stability_index
-[2]: https://img.shields.io/npm/v/nanomorph.svg?style=flat-square
-[3]: https://npmjs.org/package/nanomorph
-[4]: https://img.shields.io/travis/choojs/nanomorph/master.svg?style=flat-square
-[5]: https://travis-ci.org/choojs/nanomorph
-[6]: https://img.shields.io/codecov/c/github/choojs/nanomorph/master.svg?style=flat-square
-[7]: https://codecov.io/github/choojs/nanomorph
-[8]: http://img.shields.io/npm/dm/nanomorph.svg?style=flat-square
-[9]: https://npmjs.org/package/nanomorph
-[10]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
-[11]: https://github.com/feross/standard
-
 [mt]: https://en.wikipedia.org/wiki/Merkle_tree
 [own-vdom-1]: https://medium.com/@deathmood/how-to-write-your-own-virtual-dom-ee74acc13060
 [own-vdom-2]: https://medium.com/@deathmood/write-your-virtual-dom-2-props-events-a957608f5c76
 [hyperstream]: https://github.com/substack/hyperstream
+
+[npm-image]: https://img.shields.io/npm/v/@pirxpilot/nanomorph
+[npm-url]: https://npmjs.org/package/@pirxpilot/nanomorph
+
+[build-url]: https://github.com/pirxpilot/nanomorph/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/workflow/status/pirxpilot/nanomorph/check
+
+[deps-image]: https://img.shields.io/librariesio/release/npm/@pirxpilot/nanomorph
+[deps-url]: https://libraries.io/npm/@pirxpilot%2Fnanomorph
