@@ -42,4 +42,4 @@ module.exports = [
   'oncontextmenu',
   'onfocusin',
   'onfocusout'
-]
+];

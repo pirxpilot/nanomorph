@@ -1,0 +1,36 @@
+root = true
+
+# defaults
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+tab_width=4
+
+# Tab indentation in Makefiles
+[Makefile]
+indent_style = tab
+
+# Tab indentation in Makefiles
+[*.mk]
+indent_style = tab
+
+# Tab indentation in go files
+[*.go]
+indent_style = tab
+
+[*.rs]
+indent_style = space
+indent_size = 4
+
+[.gitconfig]
+indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false
+
+[component-shrinkwrap.json]
+insert_final_newline = false
