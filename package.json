@@ -19,10 +19,10 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "nanoassert": "^1.1.0"
+    "@pirxpilot/nanoassert": "~1"
   },
   "browser": {
-    "assert": "nanoassert"
+    "assert": "@pirxpilot/nanoassert"
   },
   "devDependencies": {
     "jsdom": "^19.0.0",
