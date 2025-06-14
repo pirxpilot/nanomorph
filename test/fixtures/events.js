@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   // attribute events (can be set with attributes)
   'onclick',
   'ondblclick',

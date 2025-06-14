@@ -1,6 +1,6 @@
-const test = require('node:test');
-const html = require('nanohtml');
-const morph = require('../');
+import test from 'node:test';
+import html from 'nanohtml';
+import morph from '../index.js';
 
 test('abstract morph', async t => {
   await t.test('root level', async t => {
