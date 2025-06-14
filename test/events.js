@@ -1,8 +1,7 @@
-const test = require('node:test');
-const html = require('nanohtml');
-const morph = require('..');
-
-const events = require('./fixtures/events');
+import test from 'node:test';
+import html from 'nanohtml';
+import morph from '../index.js';
+import events from './fixtures/events.js';
 
 function raiseEvent(element, eventName) {
   const event = new Event(eventName, {

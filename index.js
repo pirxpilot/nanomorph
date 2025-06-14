@@ -1,9 +1,7 @@
-const assert = require('assert');
-const morph = require('./lib/morph');
+import assert from 'assert';
+import morph from './lib/morph.js';
 
 const TEXT_NODE = 3;
-
-module.exports = nanomorph;
 
 // Morph one tree into another tree
 //
@@ -18,7 +16,7 @@ module.exports = nanomorph;
 //   -> diff nodes and apply patch to old node
 // nodes are the same
 //   -> walk all child nodes and append to old node
-function nanomorph(oldTree, newTree, { childrenOnly, morphId = 'morph', events } = {}) {
+export default function nanomorph(oldTree, newTree, { childrenOnly, morphId = 'morph', events } = {}) {
   assert(typeof oldTree === 'object', 'nanomorph: oldTree should be an object');
   assert(typeof newTree === 'object', 'nanomorph: newTree should be an object');
 

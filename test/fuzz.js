@@ -1,8 +1,7 @@
-const seed = require('math-random-seed');
-const test = require('node:test');
-const html = require('nanohtml');
-
-const nanomorph = require('../');
+import test from 'node:test';
+import seed from 'math-random-seed';
+import html from 'nanohtml';
+import nanomorph from '../index.js';
 
 test('chaos monkey #1', t => {
   const a = html`<div r="r"><div></div></div>`;

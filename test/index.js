@@ -1,6 +1,5 @@
-const test = require('node:test');
-
-const nanomorph = require('..');
+import test from 'node:test';
+import nanomorph from '../index.js';
 
 test('nanomorph', async t => {
   await t.test('should assert input types', t => {
