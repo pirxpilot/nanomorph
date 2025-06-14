@@ -31,7 +31,7 @@
     "@biomejs/biome": "^1.9.4",
     "jsdom": "~26",
     "jsdom-global": "~3",
-    "math-random-seed": "^1.0.0",
+    "math-random-seed": "~2",
     "nanohtml": "^1.4.0"
   },
   "files": [
