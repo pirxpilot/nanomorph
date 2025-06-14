@@ -1,12 +1,17 @@
-NODE_BIN = ./node_modules/.bin
-SRC = index.js $(wildcard src/*.js test/*.js)
-
 check: lint test
 
 lint:
-	$(NODE_BIN)/jshint $(SRC)
+	./node_modules/.bin/biome ci
+
+format:
+	./node_modules/.bin/biome check --fix
+
+TEST_OPTS += --require jsdom-global/register.js
 
 test:
-	$(NODE_BIN)/tape test/index.js
+	node --test $(TEST_OPTS)
 
-.PHONY: check lint test
+test-cov: TEST_OPTS += --experimental-test-coverage
+test-cov: test
+
+.PHONY: check format lint test test-cov

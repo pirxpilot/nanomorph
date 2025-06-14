@@ -6,7 +6,10 @@
   "scripts": {
     "test": "make check"
   },
-  "repository": "pirxpilot/nanomorph",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/nanomorph.git"
+  },
   "keywords": [
     "dom",
     "diff",
@@ -25,12 +28,11 @@
     "assert": "@pirxpilot/nanoassert"
   },
   "devDependencies": {
-    "jsdom": "^19.0.0",
-    "jsdom-global": "^3.0.2",
-    "jshint": "~2",
+    "@biomejs/biome": "^1.9.4",
+    "jsdom": "~26",
+    "jsdom-global": "~3",
     "math-random-seed": "^1.0.0",
-    "nanohtml": "^1.4.0",
-    "tape": "~5"
+    "nanohtml": "^1.4.0"
   },
   "files": [
     "index.js",

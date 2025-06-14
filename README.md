@@ -150,7 +150,7 @@ $ npm install nanomorph
 [npm-url]: https://npmjs.org/package/@pirxpilot/nanomorph
 
 [build-url]: https://github.com/pirxpilot/nanomorph/actions/workflows/check.yaml
-[build-image]: https://img.shields.io/github/workflow/status/pirxpilot/nanomorph/check
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/nanomorph/check.yaml?branch=main
 
 [deps-image]: https://img.shields.io/librariesio/release/npm/@pirxpilot/nanomorph
 [deps-url]: https://libraries.io/npm/@pirxpilot%2Fnanomorph
