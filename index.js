@@ -27,10 +27,7 @@ function nanomorph(oldTree, newTree, { childrenOnly, morphId = 'morph', events }
     return oldTree;
   }
 
-  assert(
-    newTree.nodeType !== 11,
-    'nanomorph: newTree should have one root node (which is not a DocumentFragment)'
-  );
+  assert(newTree.nodeType !== 11, 'nanomorph: newTree should have one root node (which is not a DocumentFragment)');
 
   return walk(newTree, oldTree);
 
@@ -45,10 +42,7 @@ function nanomorph(oldTree, newTree, { childrenOnly, morphId = 'morph', events }
     if (newNode.isSameNode?.(oldNode)) {
       return oldNode;
     }
-    if (
-      newNode.tagName !== oldNode.tagName ||
-      newNode.dataset?.[morphId] !== oldNode.dataset?.[morphId]
-    ) {
+    if (newNode.tagName !== oldNode.tagName || newNode.dataset?.[morphId] !== oldNode.dataset?.[morphId]) {
       return newNode;
     }
     morph(newNode, oldNode, events);
@@ -82,7 +76,6 @@ function nanomorph(oldTree, newTree, { childrenOnly, morphId = 'morph', events }
         oldNode.appendChild(newChild);
         offset++;
         continue;
-
       }
       // Both nodes are the same, morph
       if (same(newChild, oldChild)) {

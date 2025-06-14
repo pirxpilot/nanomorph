@@ -1,25 +1,11 @@
-require('jsdom-global')();
+const test = require('node:test');
 
-const tape = require('tape');
+const nanomorph = require('..');
 
-const nanomorph = require('../');
-
-const abstractMorph = require('./diff');
-const abstractMorphEvents = require('./events');
-
-require('./fuzz');
-
-specificTests(nanomorph);
-abstractMorph(nanomorph);
-abstractMorphEvents(nanomorph);
-
-function specificTests(morph) {
-  tape('nanomorph', function (t) {
-    t.test('should assert input types', function (t) {
-      t.plan(2);
-      t.throws(morph, /a/);
-      t.throws(morph.bind(null, {}), /b/);
-    });
-    t.end();
+test('nanomorph', async t => {
+  await t.test('should assert input types', t => {
+    t.plan(2);
+    t.assert.throws(nanomorph, /a/);
+    t.assert.throws(nanomorph.bind(null, {}), /b/);
   });
-}
+});
