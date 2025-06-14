@@ -1,4 +1,10 @@
 
+1.0.3 / 2025-06-14
+==================
+
+ * update `math-random-seed` to ~2
+ * use `biome` as a linter and formatter
+
 1.0.2 / 2022-06-29
 ==================
 
